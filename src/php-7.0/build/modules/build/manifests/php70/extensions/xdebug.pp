@@ -1,9 +1,9 @@
 class build::php70::extensions::xdebug {
   require build::php70
 
-  file { '/tmp/xdebug-2.4.0.tgz':
+  file { '/tmp/xdebug-2.6.1.tgz':
     ensure => present,
-    source => 'puppet:///modules/build/tmp/xdebug-2.4.0.tgz'
+    source => 'puppet:///modules/build/tmp/xdebug-2.6.1.tgz'
   }
 
   bash_exec { 'cd /tmp && tar xzf xdebug-2.6.1.tgz':
