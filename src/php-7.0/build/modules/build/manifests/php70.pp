@@ -9,7 +9,7 @@ class build::php70 {
 
   bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.3.0/etc/pool.d': }
 
-  bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.3.0/lib/php/extensions/no-debug-non-zts-20131226': }
+  bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.3.0/lib/php/extensions/no-debug-non-zts-20180731': }
 
   file { '/tmp/php-7.3.0.tar.gz':
     ensure => present,
