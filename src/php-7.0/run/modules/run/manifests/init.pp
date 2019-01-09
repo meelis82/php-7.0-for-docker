@@ -16,10 +16,6 @@ class run {
     include run::mysql
   }
 
-  if $memcached_host {
-    include run::memcached
-  }
-
   if $redis_host {
     include run::redis
   }

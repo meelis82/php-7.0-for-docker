@@ -27,8 +27,6 @@ A Docker image for [PHP](http://php.net/) version 7.0 that runs PHP in FPM (Fast
       -e MYSQL_HOST="" \
       -e MYSQL_PORT="3306" \
       -e MYSQL_MAX_ALLOWED_PACKET="512M" \
-      -e MEMCACHED_HOST="" \
-      -e MEMCACHED_PORT="11211" \
       -e REDIS_HOST="" \
       -e REDIS_PORT="6379" \
       -e PHP_INI_REALPATH_CACHE_SIZE="256k" \
@@ -53,7 +51,6 @@ A Docker image for [PHP](http://php.net/) version 7.0 that runs PHP in FPM (Fast
       -e PHP_INI_XDEBUG_REMOTE_CONNECT_BACK="On" \
       -e PHP_INI_XDEBUG_IDEKEY="PHPSTORM" \
       -e PHP_INI_XDEBUG_VAR_DISPLAY_MAX_DEPTH="5" \
-      -e PHP_INI_MEMCACHED="On" \
       -e PHP_INI_REDIS="On" \
       -e PHP_INI_SYS_TEMP_DIR="" \
       -e PHP_INI_APCU="On" \
@@ -161,8 +158,6 @@ Tests are implemented in [Bats: Bash Automated Testing System](https://github.co
     ok 63 php-7.0: ini: igbinary: on
     ok 64 php-7.0: ini: max_execution_time
     ok 65 php-7.0: ini: max_input_vars
-    ok 66 php-7.0: ini: memcached: off
-    ok 67 php-7.0: ini: memcached: on
     ok 68 php-7.0: ini: memory_limit
     ok 69 php-7.0: ini: opcache.memory_consumption
     ok 70 php-7.0: ini: opcache: off

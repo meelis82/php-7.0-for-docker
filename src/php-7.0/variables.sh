@@ -46,21 +46,6 @@ else
   export FACTER_MYSQL_PORT="$(echo "${MYSQL_PORT}" | cut -d ":" -f2)"
 fi
 
-if [ -n "${MEMCACHED_HOST}" ]; then
-  export FACTER_MEMCACHED_HOST="${MEMCACHED_HOST}"
-
-  if [ -z "${MEMCACHED_PORT}" ]; then
-    MEMCACHED_PORT="11211"
-  fi
-
-  export FACTER_MEMCACHED_PORT="${MEMCACHED_PORT}"
-else
-  MEMCACHED_PORT="$(echo "${MEMCACHED_PORT}" | sed 's/tcp:\/\///')"
-
-  export FACTER_MEMCACHED_HOST="$(echo "${MEMCACHED_PORT}" | cut -d ":" -f1)"
-  export FACTER_MEMCACHED_PORT="$(echo "${MEMCACHED_PORT}" | cut -d ":" -f2)"
-fi
-
 if [ -n "${REDIS_HOST}" ]; then
   export FACTER_REDIS_HOST="${REDIS_HOST}"
 
@@ -241,12 +226,6 @@ if [ -z "${PHP_INI_XDEBUG_VAR_DISPLAY_MAX_DEPTH}" ]; then
 fi
 
 export FACTER_PHP_INI_XDEBUG_VAR_DISPLAY_MAX_DEPTH="${PHP_INI_XDEBUG_VAR_DISPLAY_MAX_DEPTH}"
-
-if [ -z "${PHP_INI_MEMCACHED}" ]; then
-  PHP_INI_MEMCACHED="On"
-fi
-
-export FACTER_PHP_INI_MEMCACHED="${PHP_INI_MEMCACHED}"
 
 if [ -z "${PHP_INI_REDIS}" ]; then
   PHP_INI_REDIS="On"
