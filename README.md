@@ -55,9 +55,6 @@ A Docker image for [PHP](http://php.net/) version 7.0 that runs PHP in FPM (Fast
       -e PHP_INI_XDEBUG_VAR_DISPLAY_MAX_DEPTH="5" \
       -e PHP_INI_MEMCACHED="On" \
       -e PHP_INI_REDIS="On" \
-      -e PHP_INI_BLACKFIRE="On" \
-      -e PHP_INI_BLACKFIRE_SERVER_ID="" \
-      -e PHP_INI_BLACKFIRE_SERVER_TOKEN="" \
       -e PHP_INI_SYS_TEMP_DIR="" \
       -e PHP_INI_APCU="On" \
       -e PHP_INI_APD="On" \
@@ -154,10 +151,6 @@ Tests are implemented in [Bats: Bash Automated Testing System](https://github.co
     ok 49 php-7.0: fpm: pm.start_servers
     ok 50 php-7.0: ini: allow_url_fopen: off
     ok 51 php-7.0: ini: allow_url_fopen: on
-    ok 52 php-7.0: ini: blackfire: off
-    ok 53 php-7.0: ini: blackfire: on
-    ok 54 php-7.0: ini: blackfire.server_id
-    ok 55 php-7.0: ini: blackfire.server_token
     ok 56 php-7.0: ini: display_errors: off
     ok 57 php-7.0: ini: display_errors: on
     ok 58 php-7.0: ini: display_startup_errors: off
