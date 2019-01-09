@@ -3,6 +3,7 @@ class build::php70::packages {
       'build-essential',
       'libxml2-dev',
       'libssl-dev',
+      'libzip-dev',
       'libbz2-dev',
       'libcurl4-openssl-dev',
       'libjpeg-dev',
