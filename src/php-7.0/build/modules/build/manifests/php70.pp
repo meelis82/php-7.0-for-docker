@@ -1,6 +1,7 @@
 class build::php70 {
   require build::php70::packages
   require build::php70::supervisor
+  require build::php70::extensions::imap
   require build::phpfarm
 
   bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.0.14/etc/conf.d': }

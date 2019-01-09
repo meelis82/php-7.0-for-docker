@@ -26,7 +26,8 @@ configoptions="--with-libdir=/lib/x86_64-linux-gnu \
   --with-pdo-mysql \
   --with-iconv \
   --with-pear \
-  --with-imap \
+  --with-imap=/tmp/imap-2000f \
+  --with-imap-ssl \
   --with-openssl \
   --with-iconv \
   --with-bz2 \
