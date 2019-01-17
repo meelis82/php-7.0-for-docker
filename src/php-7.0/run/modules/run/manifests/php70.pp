@@ -2,7 +2,7 @@ class run::php70 {
   file { '/usr/local/src/phpfarm/inst/current/etc/php-fpm.d/www.conf':
     ensure => present,
     content => template('run/www.conf.erb'),
-    mode => 644
+    mode => "644"
   }
 
   include run::php70::ini::realpath_cache_size
